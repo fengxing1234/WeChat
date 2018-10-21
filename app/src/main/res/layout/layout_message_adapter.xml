@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gl_left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gl_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/home_normal"
+        app:layout_constraintLeft_toLeftOf="@+id/gl_left"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/text_black_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="张三"
+        app:layout_constraintLeft_toRightOf="@id/iv_icon"
+        app:layout_constraintTop_toTopOf="@id/iv_icon" />
+
+    <TextView
+        android:id="@+id/tv_draft"
+        style="@style/text_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="[草稿]"
+        android:textColor="#f00"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@id/tv_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+    <TextView
+        android:id="@+id/tv_history_msg"
+        style="@style/text_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:text="我是历史消息"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        app:layout_constraintLeft_toRightOf="@id/tv_draft" />
+
+    <TextView
+        android:id="@+id/tv_history_time"
+        style="@style/text_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2020-20-20"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_name"
+        app:layout_constraintRight_toRightOf="@id/gl_right" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="#cccccc"
+        app:layout_constraintLeft_toLeftOf="@id/gl_left"
+        app:layout_constraintRight_toRightOf="@id/gl_right"
+        app:layout_constraintTop_toBottomOf="@id/iv_icon" />
+
+</android.support.constraint.ConstraintLayout>

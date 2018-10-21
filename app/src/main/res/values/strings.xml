@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">WeChat</string>
+    <string name="group_chat">发起群聊</string>
+    <string name="add_friend">添加朋友</string>
+    <string name="more">更多</string>
+    <string name="search">search</string>
 </resources>
