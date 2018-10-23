@@ -8,5 +8,6 @@ public class ChatListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.im_activity_chat_list);
     }
 }
