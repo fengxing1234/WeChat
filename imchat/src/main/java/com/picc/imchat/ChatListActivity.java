@@ -6,12 +6,15 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.picc.imchat.fragment.ImAddressListFragment;
+import com.picc.imchat.fragment.ImMessageFragment;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class ChatListActivity extends AppCompatActivity {
@@ -32,9 +35,9 @@ public class ChatListActivity extends AppCompatActivity {
     }
 
     private void initData() {
-//        fragmentList = new ArrayList<>();
-//        fragmentList.add(MessageFragment.getInstance());
-//        fragmentList.add(AddressListFragment.getInstance());
+        fragmentList = new ArrayList<>();
+        fragmentList.add(ImMessageFragment.getInstance());
+        fragmentList.add(ImAddressListFragment.getInstance());
     }
 
     private void initView() {
@@ -42,7 +45,7 @@ public class ChatListActivity extends AppCompatActivity {
         bottomLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                //selectFragmentPage(tab.getPosition());
+                selectFragmentPage(tab.getPosition());
             }
 
             @Override
