@@ -13,6 +13,8 @@ import android.view.View;
 import android.widget.SearchView;
 import android.widget.Toast;
 
+import com.picc.imchat.ChatListActivity;
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_wechat).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, WeChatActivity.class));
+                startActivity(new Intent(MainActivity.this, ChatListActivity.class));
             }
         });
 //        ButterKnife.bind(this);
